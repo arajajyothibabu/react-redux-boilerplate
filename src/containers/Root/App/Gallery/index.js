@@ -5,7 +5,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import { Tiles } from './components';
-import { loadImages } from './actions';
+import { loadImages, resetGallery } from './actions';
 
 function mapStateToProps(state) {
     return {
@@ -16,7 +16,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        loadImages: () => dispatch(loadImages())
+        loadImages: () => dispatch(loadImages()),
+        resetGallery: () => dispatch(resetGallery())
     };
 }
 
@@ -35,6 +36,10 @@ class App extends Component{
 
     componentDidMount(){
 
+    }
+
+    componentWillUnmount(){
+        this.props.resetGallery();
     }
 
     render() {

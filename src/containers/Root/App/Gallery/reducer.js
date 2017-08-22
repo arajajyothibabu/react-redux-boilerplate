@@ -2,10 +2,10 @@
  * Created by jyothi on 22/8/17.
  */
 import {
-    GALLERY_IMAGES_PENDING,
-    GALLERY_IMAGES,
-    GALLERY_IMAGES_FAILED
+    GALLERY_IMAGES_PENDING, GALLERY_IMAGES, GALLERY_IMAGES_FAILED,
+    RESET_GALLERY
 } from './actionTypes';
+import { RESET_ALL } from '../../../../constants/actionTypes';
 
 const INITIAL_STATE = {
     images: [],
@@ -41,6 +41,10 @@ const galleryReducer = (state = INITIAL_STATE, action) => {
                 ...GALLERY_INITIAL_FLAG_STATE,
                 images_failed: true
             };
+
+        case RESET_GALLERY:
+        case RESET_ALL:
+            return INITIAL_STATE;
 
         default:
             return state;

@@ -9,6 +9,7 @@ import AppBar from 'material-ui/AppBar';
 import FlatButton from 'material-ui/FlatButton';
 import { Link } from 'react-router';
 import { GALLERY } from '../../../constants/endPoints';
+import { resetAll } from '../../../actions';
 
 function mapStateToProps(state) {
     return {
@@ -18,7 +19,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-
+        resetALL: () => dispatch(resetAll())
     };
 }
 
@@ -34,6 +35,10 @@ class App extends Component{
 
     componentDidMount(){
 
+    }
+
+    componentWillUnmount(){
+        this.props.resetAll();
     }
 
     render() {

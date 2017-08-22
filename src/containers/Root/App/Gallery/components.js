@@ -32,8 +32,8 @@ export class Tiles extends Component {
                 {
                     images_pending && <RefreshIndicator
                         size={200}
-                        left={'45%'}
-                        top={'45%'}
+                        left={600}
+                        top={200}
                         status="loading"
                     />
                 }

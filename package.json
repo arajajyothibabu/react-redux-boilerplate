@@ -22,5 +22,24 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "description": "Boilerplate for React Redux App",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arajajyothibabu/react-redux-boilerplate.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "react-router",
+    "material-ui"
+  ],
+  "author": "Jyothi Babu Araja <arajajyothibabu@gmail.com> (https://arajajyothibabu.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arajajyothibabu/react-redux-boilerplate/issues"
+  },
+  "homepage": "https://github.com/arajajyothibabu/react-redux-boilerplate#readme"
 }
